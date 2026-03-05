@@ -102,7 +102,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-center justify-center gap-2">
                       <MapPin className="w-8 h-8 text-gold mb-14" />
-                      <span className="text-lg">Near Groom's Home, Martur Mandal,<br></br>Bapatla Dist.</span>
+                      <span className="text-lg">Near Groom's Home, Dronadula, Martur Mandal,<br></br>Bapatla Dist.</span>
                     </div>
                   </div>
                 </div>
