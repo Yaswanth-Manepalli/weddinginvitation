@@ -28,8 +28,8 @@ const Index = () => {
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
             <ScrollReveal>
-              <p className="font-display text-xl md:text-base tracking-[0.4em] uppercase text-muted-foreground mb-6">
-                Wedding
+              <p className="font-display text-l md:text-base tracking-[0.4em] uppercase text-muted-foreground mb-6">
+                The Wedding Celebration of
               </p>
             </ScrollReveal>
 
