@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 import CurtainReveal from "@/components/CurtainReveal";
 import CountdownTimer from "@/components/CountdownTimer";
@@ -9,6 +9,18 @@ import weddingBg from "@/assets/wedding-bg.jpg";
 
 const Index = () => {
   const [curtainOpen, setCurtainOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -28,7 +40,7 @@ const Index = () => {
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
             <ScrollReveal>
-              <p className="font-display text-l md:text-base tracking-[0.4em] uppercase text-muted-foreground mb-6">
+              <p className="font-display text-sm md:text-base tracking-[0.4em] uppercase text-muted-foreground mb-6">
                 The Wedding Celebration of
               </p>
             </ScrollReveal>
@@ -56,9 +68,22 @@ const Index = () => {
                 2nd April 2026 &bull; 9:41 PM
               </p>
             </ScrollReveal>
-          </section>
 
-          {/* Emotional Message */}
+            <ScrollReveal delay={800}>
+              <div className="mt-2 w-32 h-16 mt-16">
+                {!hasScrolled && (
+                  <>
+                    <div className="animate-bounce flex flex-row justify-center items-center gap-1">
+                      <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                      </svg>
+                    <p className="text-sm text-muted-foreground mb-2">Swipe up to continue</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </ScrollReveal>
+          </section>
           <section className="py-20 px-4">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto text-center">
@@ -79,7 +104,7 @@ const Index = () => {
           {/* Event Details */}
           <section className="py-20 px-4">
             <ScrollReveal>
-              <h2 className="font-script text-4xl md:text-5xl gold-text text-center mb-16">
+              <h2 className="font-script text-4xl md:text-5xl gold-text text-center mb-12">
                 Wedding Celebrations
               </h2>
             </ScrollReveal>
@@ -108,6 +133,11 @@ const Index = () => {
                 </div>
               </ScrollReveal>
 
+              <ScrollReveal>
+                <h2 className="font-script text-4xl md:text-5xl gold-text text-center mb-2 mt-16">
+                  Reception Celebrations
+                </h2>
+              </ScrollReveal>
               {/* Reception */}
               <ScrollReveal delay={250}>
                 <div className="bg-cream-dark/60 backdrop-blur-sm border border-gold/20 rounded-xl p-8 text-center shadow-lg">
