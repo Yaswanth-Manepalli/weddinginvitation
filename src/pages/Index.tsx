@@ -70,7 +70,7 @@ const Index = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={800}>
-              <div className="mt-32 w-32 h-16">
+              <div className="mt-8 w-32 h-16">
                 {!hasScrolled && (
                   <>
                     <div className="animate-bounce flex flex-row justify-center items-center gap-1">
