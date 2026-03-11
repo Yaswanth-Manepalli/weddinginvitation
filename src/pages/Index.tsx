@@ -91,10 +91,9 @@ const Index = () => {
                   With Blessings
                 </h2>
                 <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/80 italic">
-                  "Two souls, one heart — bound together by love, faith, and the blessings
-                  of our families. With immense joy and gratitude, we invite you to witness
-                  and celebrate the sacred union of our beloved daughter <b>Pratyusha</b> with <b>Srikanth</b>.
-                  Your presence will be the greatest gift we could ask for."
+                  "With joy and gratitude, we invite you to join us in celebrating the 
+                  marriage of our daughter <b>Pratyusha</b> with <b>Srikanth</b>. 
+                  Your presence will be our greatest blessing."
                 </p>
                 <div className="section-divider mt-8" />
               </div>
